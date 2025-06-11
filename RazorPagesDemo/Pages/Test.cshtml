@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPagesDemo.Pages.TestModel
+
+<h2>Greeting Page</h2>
+
+<form method="post">
+    <label>Name:</label>
+    <input asp-for="Name" />
+    <button type="submit">Greet</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Name))
+{
+    <p>Hello, @Model.Name!</p>
+}
